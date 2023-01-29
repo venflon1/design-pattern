@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project 
+	xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<parent>
+		<groupId>org.springframework.boot</groupId>
+		<artifactId>spring-boot-starter-parent</artifactId>
+		<version>3.0.1</version>
+		<relativePath />
+		<!-- lookup parent from repository -->
+	</parent>
+
+	<groupId>com.acn.ra</groupId>
+	<artifactId>learn-design-pattern</artifactId>
+	<version>0.0.1-SNAPSHOT</version>
+
+	<packaging>pom</packaging>
+
+	<name>Multi module maven project design pattern implementation </name>
+	<description>
+	  Multi module maven project 
+	  with contains design pattern implementation
+	  for learn design pattern
+  	</description>
+  	
+  	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+  	
+  	<dependencies>
+		<dependency>
+			<groupId>org.projectlombok</groupId>
+			<artifactId>lombok</artifactId>
+			<optional>true</optional>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-test</artifactId>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+  	
+	<modules>
+		<module>abstract-factory-pattern</module>
+		<module>adapter-pattern</module>
+		<module>builder-pattern</module>
+		<module>command-pattern</module>
+		<module>decorator-pattern</module>
+		<module>delegate-pattern</module>
+		<module>facade-pattern</module>
+		<module>factory-pattern</module>
+		<module>iterator-pattern</module>
+		<module>mvc-pattern</module>
+		<module>null-pattern</module>
+		<module>observer-pattern</module>
+		<module>prototype-pattern</module>
+		<module>proxy-pattern</module>
+		<module>singleton-concurrent-pattern</module>
+		<module>singleton-pattern</module>
+		<module>strategy-pattern</module>
+		<module>template-pattern</module>
+		<module>visitor-pattern</module>
+	</modules>
+	
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-maven-plugin</artifactId>
+				<configuration>
+					<excludes>
+						<exclude>
+							<groupId>org.projectlombok</groupId>
+							<artifactId>lombok</artifactId>
+						</exclude>
+					</excludes>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>
